@@ -761,8 +761,8 @@ img {
 
 .motive-card:hover::before,
 .motive-card:focus-within::before {
-  opacity: 0.25;
-  transform: translateY(0) scaleY(1);
+  opacity: 0.5;
+  transform: translateY(2) scaleY(1);
 }
 
 .is-visible.motive-card {
