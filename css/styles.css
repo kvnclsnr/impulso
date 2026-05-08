@@ -761,7 +761,7 @@ img {
 
 .motive-card:hover::before,
 .motive-card:focus-within::before {
-  opacity: 0.50;
+  opacity: 0.25;
   transform: translateY(0) scaleY(1);
 }
 
@@ -878,6 +878,29 @@ img {
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.7;
+}
+
+.photo-credit {
+  margin-top: 0.95rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+.photo-credit a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(148, 163, 184, 0.6);
+  text-underline-offset: 0.15rem;
+  transition: color 0.25s var(--ease), text-decoration-color 0.25s var(--ease), opacity 0.25s var(--ease);
+}
+
+.photo-credit a:hover,
+.photo-credit a:focus-visible {
+  color: var(--text-primary);
+  text-decoration-color: currentColor;
+  opacity: 1;
 }
 
 .motive-card,
@@ -1229,10 +1252,19 @@ img {
   border-radius: 16px;
 }
 
+.support-credit {
+  margin-top: -0.6rem;
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   .support-img {
     height: 100%;
     max-height: none;
+  }
+  
+  .support-credit {
+    text-align: left;
   }
 }
 
