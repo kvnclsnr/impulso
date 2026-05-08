@@ -347,10 +347,63 @@
 
 /* ── 11. EASTER EGG EN LA CONSOLA ───────────────────────────────── */
 
+// NAME LOGO
+
 console.log(
-  '%cimpulso%c.',
-  'color: #e5e7eb; font-weight: 600; font-size: 16px; font-family: Inter, sans-serif;',
-  'color: #0ea5e9; font-weight: 700; font-size: 16px;'
+  '%c\nimpulso%c.\n',
+  'color: #f0f4ff; font-weight: 800; font-size: 16px; font-family: Inter, sans-serif;',
+  'color: #0ea5e9; font-weight: 800; font-size: 16px; font-family: Inter, sans-serif;'
+);
+
+// TEXT
+
+const gradientWord = 'Desarrollador';
+const gradientRepo = 'Repositorio:';
+
+const colors = [
+  '#0ea5e9',
+  '#22a3ee',
+  '#369df3',
+  '#4a97f8',
+  '#5e91fd',
+  '#728bff',
+  '#8685ff',
+  '#8b5cf6'
+];
+
+function createGradientText(text) {
+  let styled = '';
+  const styles = [];
+
+  [...text].forEach((char, i) => {
+    const color = colors[Math.floor((i / text.length) * (colors.length - 1))];
+
+    styled += `%c${char}`;
+    styles.push(
+      `color:${color}; font-weight: 600; font-size: 14px; font-family: Inter, sans-serif;`
+    );
+  });
+
+  return { styled, styles };
+}
+
+const dev = createGradientText(gradientWord);
+const repo = createGradientText(gradientRepo);
+
+console.log(
+  `%c\n¿Eres ${dev.styled}%c?\n\n%c¡Puedes Contribuir al Proyecto!\n\n${repo.styled}%c https://github.com/kvnclsnr/impulso\n`,
+  
+  'color: #f0f4ff; font-weight:600; font-size:14px; font-family: Inter, sans-serif;',
+  
+  ...dev.styles,
+  
+  'color: #f0f4ff; font-weight:600; font-size:14px; font-family: Inter, sans-serif;',
+  
+  'color: #f0f4ff; font-weight:600; font-size:14px; font-family: Inter, sans-serif;',
+  
+  ...repo.styles,
+  
+  'font-size:13px; font-family: Inter, sans-serif;'
 );
 
 /* ── 12. INTERACTIVIDAD SUTIL EN QR ───────────────────────────────── */
