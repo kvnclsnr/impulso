@@ -31,6 +31,11 @@
     <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
     
     <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
+
+    <!-- PRELOAD CRITICAL ASSETS -->
+
+    <link rel="preload" href="css/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="img/hero.webp" as="image" fetchpriority="high">
     
     <!-- TAILWIND BUILD -->
     
@@ -398,6 +403,8 @@
               src="img/motivation1.webp"
               alt="Campus Unimag"
               class="motive-img"
+              width="1200"
+              height="800"
               loading="lazy"
             />
             
@@ -434,6 +441,8 @@
               src="img/motivation2.webp"
               alt="Tareas"
               class="motive-img"
+              width="1200"
+              height="800"
               loading="lazy"
             />
             
@@ -470,6 +479,8 @@
               src="img/motivation3.webp"
               alt="Dificultad"
               class="motive-img"
+              width="1200"
+              height="800"
               loading="lazy"
             />
             
@@ -818,6 +829,8 @@
                 src="img/relax.webp"
                 alt="Relax"
                 class="support-img"
+                width="1200"
+                height="800"
                 loading="lazy"
               />
               
@@ -1058,7 +1071,7 @@
           
           <div class="qr-code-area reveal reveal-delay-1">
             <div class="qr-placeholder" aria-label="Copiar enlace de Impulso" role="button" tabindex="0" data-copy-url="https://kvnclsnr.github.io/impulso/">
-              <img src="img/qrcode.webp" alt="https://kvnclsnr.github.io/impulso/">
+              <img src="img/qrcode.webp" alt="https://kvnclsnr.github.io/impulso/" width="512" height="512" loading="lazy">
             </div>
             
             <p class="qr-caption">
@@ -1119,7 +1132,7 @@
     
     <!-- IMPORT JAVASCRIPT -->
     
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     
   </body>
   

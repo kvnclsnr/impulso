@@ -1,4 +1,4 @@
-/* VARIABLES */
+/* DESIGN VARIABLES */
 
 :root {
   
@@ -55,7 +55,7 @@
   --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* RESET & BASE */
+/* RESET AND BASE */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -87,7 +87,7 @@ p {
   max-width: 70ch;
 }
 
-/* FOCUS STYLE */
+/* ACCESSIBLE FOCUS STYLE */
 
 :focus-visible {
   outline: 2px solid var(--ocean-400);
@@ -149,7 +149,7 @@ p {
   66%       { transform: translate(-2%, 2%) scale(0.97); }
 }
 
-/* NAV */
+/* NAVBAR */
 
 .nav-glass {
   background: rgba(6, 9, 18, 0.6);
@@ -197,13 +197,7 @@ p {
 
 .nav-cta:active { transform: scale(0.97); }
 
-/* SECTION: HERO */
-
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+/* HERO */
 
 .hero-section {
   padding-top: var(--nav-height);
@@ -215,7 +209,7 @@ img {
   background-repeat: no-repeat;
 }
 
-/* TAGS */
+/* BADGES */
 
 .badge {
   display: inline-flex;
@@ -392,7 +386,7 @@ img {
   }
 }
 
-/* Indicador Scroll */
+/* INDICADOR SCROLL */
 
 .scroll-hint {
   display: flex;
@@ -434,7 +428,7 @@ img {
   100% { opacity: 0; transform: translateY(10px); }
 }
 
-/* ── UTILIDADES DE SECCIÓN ─────────────────────────────────────── */
+/* SECTION UTILITIES */
 
 .section-padding {
   padding: var(--section-py) 0;
@@ -500,7 +494,8 @@ img {
   text-wrap: pretty;
 }
 
-/* ── TARJETA DE CRISTAL ───────────────────────────────────────────── */
+/* GLASS CARDS */
+
 .glass-card {
   background: var(--glass-bg);
   backdrop-filter: var(--blur-md);
@@ -528,7 +523,8 @@ img {
   box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
 
-/* ── CUADRÍCULA DE CONSEJOS ────────────────────────────────────────────── */
+/* TIPS GRID */
+
 .tips-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -593,7 +589,8 @@ img {
   transform: translateY(-1px);
 }
 
-/* ── SECCIÓN DE MOTIVACIÓN ───────────────────────────────────── */
+/* MOTIVATION */
+
 .motivation-section {
   background: linear-gradient(180deg, var(--bg-base) 0%, var(--bg-mid) 50%, var(--bg-base) 100%);
   position: relative;
@@ -630,7 +627,8 @@ img {
   to   { transform: translateY(-50%) rotate(360deg); }
 }
 
-/* Bloque de cita */
+/* QUOTE */
+
 .quote-block {
   display: flex;
   align-items: flex-start;
@@ -682,7 +680,8 @@ img {
   font-style: normal;
 }
 
-/* Cuadrícula Motivacional */
+/* MOTIVATION GRID */
+
 .motivation-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -806,7 +805,6 @@ img {
   transform: scale(1.05);
 }
 
-
 .motive-img-slot {
   width: 100%;
   height: clamp(190px, 28vw, 300px);
@@ -845,7 +843,6 @@ img {
 
 }
 
-
 .motive-content {
   padding: 1.75rem;
   display: flex;
@@ -863,7 +860,6 @@ img {
   border-radius: var(--r-sm);
   letter-spacing: 0.04em;
 }
-
 
 .motive-title {
   font-family: 'Inter', sans-serif;
@@ -946,7 +942,8 @@ img {
   transform: scale(1);
 }
 
-/* Barra de Estadísticas */
+/* STATS */
+
 .stats-bar {
   display: grid;
   grid-template-columns: 1fr;
@@ -1014,7 +1011,6 @@ img {
   }
 }
 
-
 .quote-block.reveal.is-visible {
   animation: quoteLiftIn 0.75s var(--spring) both;
 }
@@ -1031,7 +1027,8 @@ img {
 .stats-bar.reveal.is-visible .stat-item:nth-child(3) { animation-delay: 0.22s; }
 .stats-bar.reveal.is-visible .stat-item:nth-child(5) { animation-delay: 0.34s; }
 
-/* ── PASOS (SECCIÓN ABRUMADO) ──────────────────────────── */
+/* STEPS */
+
 .steps-container {
   max-width: 720px;
   margin: 0 auto;
@@ -1105,7 +1102,8 @@ img {
   line-height: 1.75;
 }
 
-/* ── SECCIÓN DE APOYO ──────────────────────────────────────── */
+/* SUPPORT */
+
 .support-section { position: relative; overflow: hidden; }
 
 .support-glow {
@@ -1295,7 +1293,8 @@ img {
 .chip-violet { background: rgba(139,92,246,0.12);  color: var(--violet-400); border-color: rgba(139,92,246,0.25); }
 .chip-coral  { background: rgba(244,63,94,0.12);   color: var(--coral-400);  border-color: rgba(244,63,94,0.25); }
 
-/* Sección Señales */
+/* SIGNS */
+
 .signs-section {
   background: var(--glass-bg);
   backdrop-filter: var(--blur-md);
@@ -1362,7 +1361,7 @@ img {
   background: linear-gradient(90deg, rgba(244,63,94,0.5), rgba(244,63,94,0.18));
 }
 
-/* ── CUADRÍCULA DE CONTACTO ─────────────────────────────────────────── */
+/* CONTACT */
 
 .contact-card {
   display: flex;
@@ -1507,7 +1506,6 @@ img {
 .btn-contact-lime   { background: linear-gradient(135deg, var(--lime-500), var(--ocean-400)); }
 .btn-contact-violet { background: linear-gradient(135deg, var(--violet-500), var(--ocean-500)); }
 
-
 .contact-spotlight {
   position: relative;
   overflow: hidden;
@@ -1549,7 +1547,7 @@ img {
 }
 
 .contact-cta-wrap { display: inline-flex; flex-direction: column; gap: 0.45rem; }
- .contact-cta-hint { font-size: 0.75rem; color: var(--text-muted); opacity: 0.9; }
+.contact-cta-hint { font-size: 0.75rem; color: var(--text-muted); opacity: 0.9; }
 
 .contact-form-preview {
   width: min(100%, 250px);
@@ -1642,7 +1640,6 @@ img {
   65%, 100% { transform: translateX(120%); }
 }
 
-
 .contact-spotlight-badge {
   display: inline-flex;
   padding: 0.35rem 0.75rem;
@@ -1703,6 +1700,7 @@ img {
   border: 1px solid rgba(255,255,255,0.15);
   color: var(--text-secondary); font-size: 0.82rem;
 }
+
 .contact-mini-card svg { color: var(--ocean-400); }
 .contact-spotlight-cta { max-width: 260px; }
 
@@ -1713,38 +1711,8 @@ img {
   .contact-spotlight-cta { max-width: 100%; }
 }
 
-/* Aviso de Emergencia */
-.emergency-notice {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  background: rgba(244, 63, 94, 0.08);
-  border: 1px solid rgba(244, 63, 94, 0.25);
-  border-radius: var(--r-md);
-  padding: clamp(1rem, 3.6vw, 1.25rem) clamp(1rem, 4.5vw, 1.5rem);
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
+/* QR */
 
-.emergency-icon {
-  flex-shrink: 0;
-  color: var(--coral-400);
-  margin-top: 2px;
-}
-
-.emergency-notice strong { color: var(--text-primary); }
-
-.emergency-link {
-  color: var(--coral-400);
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: rgba(244,63,94,0.4);
-  transition: colsignsor 0.2s;
-}
-.emergency-link:hover { color: var(--coral-500); }
-
-/* ── SECCIÓN QR ───────────────────────────────────────────── */
 .qr-section {
   background: linear-gradient(180deg, var(--bg-base) 0%, var(--bg-mid) 100%);
   padding-left: 1rem;
@@ -2026,7 +1994,8 @@ img {
   50% { opacity: 0.5; }
 }
 
-/* ── FOOTER ───────────────────────────────────────────────── */
+/* FOOTER */
+
 .footer {
   padding: 3.5rem 0 2rem;
   border-top: 1px solid var(--glass-border);
@@ -2082,21 +2051,21 @@ img {
 .footer-note { font-size: 0.72rem; opacity: 0.7; }
 
 @media (hover: hover) and (pointer: fine) {
-.glass-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255,255,255,0.18);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-}
-
+  .glass-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,0.18);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+  
   .motive-card:hover,
   .support-hero-card:hover {
     transform: translateY(-4px);
   }
-
+  
   .step-item:hover .step-content {
     transform: translateX(5px);
   }
-
+  
   .step-item:hover .step-number {
     opacity: 1;
     transform: translateX(5px);
@@ -2123,7 +2092,7 @@ img {
   }
 }
 
-/* ── ANIMACIONES REVEAL ────────────────────────────────────── */
+/* REVEAL ANIMATIONS */
 
 .reveal {
   opacity: 0;
@@ -2141,38 +2110,41 @@ img {
 .reveal-delay-3 { transition-delay: 0.36s; }
 .reveal-delay-4 { transition-delay: 0.48s; }
 
-/* ── BARRA DE DESPLAZAMIENTO (SCROLLBAR) ────────────────────────────────────────────── */
+/* SCROLLBAR */
+
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-base); }
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 99px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
 
-/* ── SELECCIÓN DE TEXTO ────────────────────────────────────────────── */
+/* TEXT SELECTION */
+
 ::selection {
   background: rgba(14, 165, 233, 0.3);
   color: var(--text-primary);
 }
 
-/* ── REDUCED MOTION ───────────────────────────────────────── */
+/* REDUCED MOTION */
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-
+  
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
-
+  
   .orb,
   .deco-ring-1,
   .deco-ring-2,
   .scroll-wheel {
     animation: none !important;
   }
-
+  
   .reveal,
   .reveal.is-visible {
     opacity: 1;
@@ -2186,7 +2158,8 @@ img {
   100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* ── BALANCE DE SISTEMA VISUAL ───────────────────────── */
+/* VISUAL BALANCE */
+
 :root {
   --motion-fast: 180ms;
   --motion-base: 280ms;
@@ -2227,7 +2200,8 @@ img {
   transform: translateY(-1px);
 }
 
-/* reduce interaction disparity */
+/* REDUCE INTERACTION DISPARITY */
+
 .contact-spotlight,
 .signs-section,
 .stats-bar,
@@ -2239,11 +2213,8 @@ img {
   transition-duration: var(--motion-base);
 }
 
-
-/* ── AJUSTES DE CONSISTENCIA SOLICITADOS ───────────────────────── */
 :root { --card-hover-lift: -4px; }
 
-/* Quitar animaciones de listas en Orientación y Señales */
 .step-item.ui-panel:hover {
   background: transparent;
   transform: none;
@@ -2255,7 +2226,6 @@ img {
   transform: none;
 }
 
-/* Unificar sensibilidad y desplazamiento de tarjetas */
 .glass-card:hover,
 .motive-card:hover
 .support-hero-card:hover,
@@ -2266,20 +2236,17 @@ img {
   transform: translateY(var(--card-hover-lift));
 }
 
-/* Normalizar amplitud de microinteracciones internas */
 .step-item:hover .step-content,
 .step-item:hover .step-number {
   transform: none;
 }
 
-/* Arreglar ancho del label bajo animación del formulario */
 .contact-mini-card {
   width: min(100%, 250px);
   justify-content: center;
   text-align: center;
 }
 
-/* En móvil, ocultar todo el bloque lateral del spotlight */
 @media (max-width: 900px) {
   .spotlight-side-cont,
   .contact-spotlight-side {
@@ -2287,8 +2254,6 @@ img {
   }
 }
 
-
-/* ── Refinamiento UX: hover de pasos en Orientación ───────────────────────── */
 .step-item.ui-panel {
   position: relative;
   overflow: hidden;

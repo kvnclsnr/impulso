@@ -1,4 +1,4 @@
-// 1. SCROLL REVEAL ANIMATION
+// SECTION: SCROLL REVEAL ANIMATION
 
 (function initReveal() {
   
@@ -11,7 +11,7 @@
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
-          // Dejar de observar una vez visible
+          // STOP OBSERVING AFTER FIRST REVEAL
           observer.unobserve(entry.target);
         }
       });
@@ -26,7 +26,7 @@
   
 })();
 
-/* ── 2. EFECTO CRISTAL EN NAVEGACIÓN AL HACER SCROLL ────────────────────────── */
+/* SECTION: NAVBAR GLASS EFFECT ON SCROLL */
 (function initNavScroll() {
   const nav = document.querySelector('.nav-glass');
   if (!nav) return;
@@ -45,7 +45,7 @@
   onScroll();
 })();
 
-/* ── 3. SCROLL SUAVE PARA TODOS LOS ENLACES ANCLA ─────────────────── */
+/* SECTION: GLOBAL SMOOTH SCROLL FOR ANCHOR LINKS */
 (function initSmoothScroll() {
   const nav = document.querySelector('.nav-glass');
   const prefersReducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -63,8 +63,8 @@
   });
 })();
 
-/* ── 4. EFECTO ONDA EN BOTONES (RIPPLE EFFECT) ───────────────────────────────── */
-(function initRipple() {
+/* SECTION: BUTTON RIPPLE EFFECT */
+function initRipple() {
   const RIPPLE_SELECTORS = '.btn-primary, .btn-primary-end, .btn-ghost-end, .btn-support, .btn-contact, .nav-cta';
 
   document.querySelectorAll(RIPPLE_SELECTORS).forEach((btn) => {
@@ -108,9 +108,9 @@
     `;
     document.head.appendChild(style);
   }
-})();
+}
 
-/* ── 5. SEGUIMIENTO DE SECCIÓN ACTIVA ───────────────────── */
+/* SECTION: ACTIVE SECTION TRACKING */
 (function initSectionTracking() {
   const sections = document.querySelectorAll('section[id]');
   if (!sections.length) return;
@@ -131,8 +131,8 @@
   sections.forEach((s) => sectionObserver.observe(s));
 })();
 
-/* ── 6. ORBES DE PARALLAX ─────────────────────────────────────── */
-(function initParallaxOrbs() {
+/* SECTION: PARALLAX ORBS */
+function initParallaxOrbs() {
   if (!matchMedia('(pointer: fine)').matches) return;
 
   const orbs = document.querySelectorAll('.orb');
@@ -157,10 +157,10 @@
       rafId = null;
     });
   });
-})();
+}
 
-/* ── 7. INCLINACIÓN DE TARJETAS ───────────────────────────────────── */
-(function initCardTilt() {
+/* SECTION: CARD TILT INTERACTION */
+function initCardTilt() {
   if (!matchMedia('(pointer: fine)').matches) return;
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -188,10 +188,10 @@
       card.style.transition = 'transform 0.4s cubic-bezier(0.34,1.56,0.64,1)';
     });
   });
-})();
+}
 
-/* ── 7B. MICROINTERACCIÓN EN ACCIONES QR ───────────────────────────── */
-(function initQrActionMotion() {
+/* SECTION: QR ACTION MICRO-INTERACTION */
+function initQrActionMotion() {
   if (!matchMedia('(pointer: fine)').matches) return;
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -215,9 +215,9 @@
       button.style.transition = 'transform 0.3s cubic-bezier(0.34,1.56,0.64,1)';
     });
   });
-})();
+}
 
-/* ── 8. COPIAR AL PORTAPAPELES (TELÉFONOS) ─────────────────── */
+/* SECTION: COPY TO CLIPBOARD FOR PHONE BUTTONS */
 (function initPhoneCopy() {
   const phoneLinks = document.querySelectorAll('.contact-phone[href^="tel"]');
   if (!phoneLinks.length) return;
@@ -266,13 +266,13 @@
         await navigator.clipboard.writeText(number);
         showToast('Número copiado al portapapeles');
       } catch {
-        // Fallo silencioso si la API no está disponible
+        // FALLO SILENCIOSO SI LA API NO ESTÁ DISPONIBLE
       }
     });
   });
 })();
 
-/* ── 9. ACCESIBILIDAD: SALTAR AL CONTENIDO ─────────────────────── */
+/* SECTION: SKIP LINK ACCESSIBILITY */
 (function injectSkipLink() {
   const skip = document.createElement('a');
   skip.href        = '#tips';
@@ -297,7 +297,7 @@
   document.body.prepend(skip);
 })();
 
-/* ── 10. ANIMACIÓN DE CONTADORES ─────────────────── */
+/* SECTION: STATS COUNTER ANIMATION */
 (function initCounters() {
   const animateCount = (el, target, duration, suffix) => {
     const start     = performance.now();
@@ -345,7 +345,7 @@
   if (statsBar) statObserver.observe(statsBar);
 })();
 
-/* ── 11. EASTER EGG EN LA CONSOLA ───────────────────────────────── */
+/* SECTION: CONSOLE EASTER EGG */
 
 // NAME LOGO
 
@@ -391,7 +391,8 @@ const dev = createGradientText(gradientWord);
 const repo = createGradientText(gradientRepo);
 
 console.log(
-  `%c\n¿Eres ${dev.styled}%c?\n\n%c¡Puedes Contribuir al Proyecto!\n\n${repo.styled}%c https://github.com/kvnclsnr/impulso\n`,
+  `%c\n¿Eres ${dev.styled}%c?\n\n%c¡Puedes Contribuir al Proyecto!\n\n${repo.styled}%c https://github.com/kvnclsnr/impulso
+`,
   
   'color: #f0f4ff; font-weight:600; font-size:14px; font-family: Inter, sans-serif;',
   
@@ -406,7 +407,7 @@ console.log(
   'font-size:13px; font-family: Inter, sans-serif;'
 );
 
-/* ── 12. INTERACTIVIDAD SUTIL EN QR ───────────────────────────────── */
+/* SECTION: SUBTLE QR INTERACTIVITY */
 (function initQrHover() {
   if (!matchMedia('(pointer: fine)').matches) return;
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -429,7 +430,7 @@ console.log(
   });
 })();
 
-/* ── 13. COPIAR ENLACE DESDE QR ───────────────────────────────── */
+/* SECTION: COPY LINK FROM QR */
 (function initQrCopy() {
   const qr = document.querySelector('.qr-placeholder');
   const feedback = document.querySelector('.qr-copy-feedback');
@@ -466,4 +467,15 @@ console.log(
     event.preventDefault();
     copyLink();
   });
+})();
+
+
+(function initMotionEffects(){
+  const run = () => { initRipple(); initParallaxOrbs(); initCardTilt(); initQrActionMotion(); };
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(run, { timeout: 1200 });
+  } else {
+    setTimeout(run, 250);
+  }
 })();
